@@ -5,8 +5,26 @@ class CardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('Card')),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Cards'),
+      ),
+      body: ListView(
+        children: [
+
+          Card(
+            child: Column(
+              children: const [
+                ListTile(
+                  leading: Icon(Icons.document_scanner),
+                  title: Text('Soy un titulo'),
+                )
+              ],
+            ),
+          )
+
+        ],
+      ),
     );
   }
 }
