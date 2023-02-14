@@ -15,18 +15,22 @@ class CustomCardType1 extends StatelessWidget {
             title: Text('Soy un titulo'),
             subtitle: Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              TextButton(
-                onPressed: () {}, 
-                child: const Text('Cancel')
-              ),
-              TextButton(
-                onPressed: () {}, 
-                child: const Text('Ok')
-              ),
-            ],
+
+          Padding(
+            padding: const EdgeInsets.only(right: 5),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(
+                  onPressed: () {}, 
+                  child: const Text('Cancel')
+                ),
+                TextButton(
+                  onPressed: () {}, 
+                  child: const Text('Ok')
+                ),
+              ],
+            ),
           )
         ],
       ),
