@@ -10,6 +10,7 @@ class CardScreen extends StatelessWidget {
         title: Text('Cards'),
       ),
       body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
         children: [
 
           Card(
@@ -18,6 +19,7 @@ class CardScreen extends StatelessWidget {
                 ListTile(
                   leading: Icon(Icons.document_scanner),
                   title: Text('Soy un titulo'),
+                  subtitle: Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'),
                 )
               ],
             ),
