@@ -8,13 +8,22 @@ class CustomCardType2 extends StatelessWidget {
     return Card(
       elevation: 10,
       child: Column(
-        children: const [
-          FadeInImage(
+        children: [
+          const FadeInImage(
             placeholder: AssetImage('assets/jar-loading.gif'),
             image: NetworkImage('https://img.freepik.com/free-vector/nature-scene-with-river-hills-forest-mountain-landscape-flat-cartoon-style-illustration_1150-37326.jpg?w=2000'),
             width: double.infinity,
             height: 260,
             fit: BoxFit.cover,
+          ),
+          Container(
+            alignment: AlignmentDirectional.centerEnd,
+            padding: const EdgeInsets.only(
+              right: 20,
+              bottom: 10,
+              top: 10,
+            ),
+            child: Text('Un hermoso paisaje')
           )
         ],
       ),
