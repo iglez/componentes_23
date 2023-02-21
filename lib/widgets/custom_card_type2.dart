@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class CustomCardType2 extends StatelessWidget {
-  
   final String imageUrl;
-  
+  final String? name;
+
   const CustomCardType2({
     super.key, 
-    required this.imageUrl
+    required this.imageUrl,
+    this.name
   });
 
   @override
@@ -20,7 +21,7 @@ class CustomCardType2 extends StatelessWidget {
         children: [
           FadeInImage(
             placeholder: AssetImage('assets/jar-loading.gif'),
-            image: NetworkImage( imageUrl ),
+            image: NetworkImage(imageUrl),
             width: double.infinity,
             height: 260,
             fit: BoxFit.cover,
@@ -32,7 +33,7 @@ class CustomCardType2 extends StatelessWidget {
                 bottom: 10,
                 top: 10,
               ),
-              child: Text('Un hermoso paisaje'))
+              child: Text( name ?? 'Sin titulo'))
         ],
       ),
     );

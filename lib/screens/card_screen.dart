@@ -18,6 +18,7 @@ class CardScreen extends StatelessWidget {
           CustomCardType1(),
           SizedBox(height: 10),
           CustomCardType2(
+            name: 'Un hermoso paisaje',
             imageUrl: 'https://img.freepik.com/free-vector/nature-scene-with-river-hills-forest-mountain-landscape-flat-cartoon-style-illustration_1150-37326.jpg?w=2000',
           ),
           SizedBox(height: 10),
