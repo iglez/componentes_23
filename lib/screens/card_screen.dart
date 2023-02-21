@@ -23,6 +23,7 @@ class CardScreen extends StatelessWidget {
           ),
           SizedBox(height: 10),
           CustomCardType2(
+            name: null,
             imageUrl: 'https://img.freepik.com/premium-vector/mountain-green-field-alpine-landscape-nature-with-wooden-houses_194708-1779.jpg?w=2000',
           ),
           SizedBox(height: 10),
