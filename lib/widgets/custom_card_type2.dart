@@ -5,6 +5,15 @@ class CustomCardType2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Card(
+      elevation: 10,
+      child: Column(
+        children: const [
+          Image(
+            image: NetworkImage('https://img.freepik.com/free-vector/nature-scene-with-river-hills-forest-mountain-landscape-flat-cartoon-style-illustration_1150-37326.jpg?w=2000')
+          )
+        ],
+      ),
+    );
   }
 }
