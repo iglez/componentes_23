@@ -9,7 +9,8 @@ class CustomCardType2 extends StatelessWidget {
       elevation: 10,
       child: Column(
         children: const [
-          Image(
+          FadeInImage(
+            placeholder: AssetImage('assets/jar-loading.gif'),
             image: NetworkImage('https://img.freepik.com/free-vector/nature-scene-with-river-hills-forest-mountain-landscape-flat-cartoon-style-illustration_1150-37326.jpg?w=2000')
           )
         ],
