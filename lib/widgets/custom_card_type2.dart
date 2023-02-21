@@ -6,7 +6,12 @@ class CustomCardType2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 10,
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(18)
+      ),
+      elevation: 30,
+      // shadowColor: Colors.amber,
       child: Column(
         children: [
           const FadeInImage(
