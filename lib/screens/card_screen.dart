@@ -1,4 +1,4 @@
-import 'package:componentes_23/widgets/custom_card_type1.dart';
+import 'package:componentes_23/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class CardScreen extends StatelessWidget {
@@ -15,7 +15,8 @@ class CardScreen extends StatelessWidget {
         children: const [
 
           // Extract Widget
-          CustomCardType1()
+          CustomCardType1(),
+          CustomCardType2()
 
         ],
       ),
