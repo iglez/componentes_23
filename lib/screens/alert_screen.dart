@@ -11,6 +11,9 @@ class AlertScreen extends StatelessWidget {
         builder: (context) {
           // return Text('Alerta?');
           return AlertDialog(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadiusDirectional.circular(10),
+            ),
             elevation: 5,
             title: const Text('Titulo Alerta'),
             content: Column(mainAxisSize: MainAxisSize.min, children: const [
