@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 class AlertScreen extends StatelessWidget {
   const AlertScreen({super.key});
 
-  void displayDialog(BuildContext context) {
+  void displayDialogIOS( BuildContext context ) {
+
+  }
+
+  void displayDialogAndroid(BuildContext context) {
     // print('hola mundo');
     showDialog(
         barrierDismissible: false,
@@ -39,7 +43,8 @@ class AlertScreen extends StatelessWidget {
       body: Center(
           child: ElevatedButton(
               // onPressed: null,
-              onPressed: () => displayDialog(context),
+              onPressed: () => displayDialogIOS(context),
+              // onPressed: () => displayDialogAndroid(context),
               child: const Text('Mostrar Alerta'))),
       floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.red,
