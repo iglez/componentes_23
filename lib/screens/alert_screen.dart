@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -6,7 +8,7 @@ class AlertScreen extends StatelessWidget {
 
   void displayDialogIOS(BuildContext context) {
     showCupertinoDialog(
-      barrierDismissible: true,
+      // barrierDismissible: true,
         context: context,
         builder: (context) {
           return CupertinoAlertDialog(
@@ -62,8 +64,9 @@ class AlertScreen extends StatelessWidget {
       body: Center(
           child: ElevatedButton(
               // onPressed: null,
-              onPressed: () => displayDialogIOS(context),
-              // onPressed: () => displayDialogAndroid(context),
+              onPressed: () => Platform.isAndroid 
+              ? displayDialogAndroid(context) 
+              : displayDialogIOS(context),
               child: const Text('Mostrar Alerta'))),
       floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.red,
