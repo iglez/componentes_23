@@ -1,10 +1,18 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AlertScreen extends StatelessWidget {
   const AlertScreen({super.key});
 
-  void displayDialogIOS( BuildContext context ) {
-
+  void displayDialogIOS(BuildContext context) {
+    showCupertinoDialog(
+      barrierDismissible: true,
+        context: context,
+        builder: (context) {
+          return CupertinoAlertDialog(
+            title: Text('Titulo Alerta'),
+          );
+        });
   }
 
   void displayDialogAndroid(BuildContext context) {
@@ -29,9 +37,8 @@ class AlertScreen extends StatelessWidget {
             ]),
             actions: [
               TextButton(
-                onPressed: () => Navigator.pop(context), 
-                child: Text('Cancelar')
-              )
+                  onPressed: () => Navigator.pop(context),
+                  child: Text('Cancelar'))
             ],
           );
         });
