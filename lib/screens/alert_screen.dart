@@ -10,7 +10,19 @@ class AlertScreen extends StatelessWidget {
         context: context,
         builder: (context) {
           return CupertinoAlertDialog(
-            title: Text('Titulo Alerta'),
+            title: const Text('Titulo Alerta'),
+            content: Column(mainAxisSize: MainAxisSize.min, children: const [
+              Text('Este es el contenido de la alerta'),
+              SizedBox(height: 10),
+              FlutterLogo(
+                size: 100,
+              )
+            ]),
+            actions: [
+              TextButton(
+                  onPressed: () => Navigator.pop(context),
+                  child: Text('Cancelar'))
+            ],
           );
         });
   }
