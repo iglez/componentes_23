@@ -19,7 +19,10 @@ class AvatarScreen extends StatelessWidget {
         ],
       ),
       body: const Center(
-        child: Text('Avatar Screen')
+        child: CircleAvatar(
+          maxRadius: 130,
+          backgroundImage: NetworkImage('https://sm.ign.com/t/ign_latam/gallery/t/the-last-o/the-last-of-us-hbo-series-character-guide_8nu6.1280.jpg'),
+        )
       ),
     );
   }
