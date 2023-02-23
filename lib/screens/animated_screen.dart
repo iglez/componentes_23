@@ -8,20 +8,23 @@ class AnimatedScreen extends StatefulWidget {
 }
 
 class _AnimatedScreenState extends State<AnimatedScreen> {
+  double _width = 50;
+  double _height = 50;
+  Color _color = Colors.indigo;
+  BorderRadiusGeometry _borderRadius = BorderRadius.circular(20);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Aminated Container')
-      ),
+      appBar: AppBar(title: const Text('Aminated Container')),
       body: Center(
         child: Container(
           // color: Colors.red,
-          width: 100,
-          height: 100,
+          width: _width,
+          height: _height,
           decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(20)
+            color: _color, 
+            borderRadius: _borderRadius
           ),
         ),
       ),
