@@ -10,8 +10,11 @@ class AnimatedScreen extends StatefulWidget {
 class _AnimatedScreenState extends State<AnimatedScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('Animations')),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Aminated Container')
+      ),
+      body: Container(),
     );
   }
 }
