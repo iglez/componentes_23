@@ -22,11 +22,12 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
           // color: Colors.red,
           width: _width,
           height: _height,
-          decoration: BoxDecoration(
-            color: _color, 
-            borderRadius: _borderRadius
-          ),
+          decoration: BoxDecoration(color: _color, borderRadius: _borderRadius),
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.play_circle_outline),
+        onPressed: () {},
       ),
     );
   }
