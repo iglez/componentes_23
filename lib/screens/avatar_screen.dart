@@ -8,9 +8,13 @@ class AvatarScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Ivan Gonzalez'),
-        actions: const [
-          CircleAvatar(
-            child: Text('IG'),
+        actions: [
+          Container(
+            margin: const EdgeInsets.only(right: 10),
+            child: const CircleAvatar(
+              child: Text('IG'),
+              backgroundColor: Colors.black,
+            ),
           )
         ],
       ),
