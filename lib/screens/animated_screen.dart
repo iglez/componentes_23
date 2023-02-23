@@ -1,3 +1,5 @@
+import 'dart:math' show Random;
+
 import 'package:flutter/material.dart';
 
 class AnimatedScreen extends StatefulWidget {
@@ -14,14 +16,18 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(20);
 
   void changeShape() {
-    _width += 100;
-    _height += 100;
-    _color = Colors.red;
-    _borderRadius = BorderRadius.circular(10);
+    final random = Random();
 
-    setState(() {
-      
-    });
+    _width = random.nextInt(300) + 70;
+    _height = random.nextInt(300) + 70;
+    _color = Color.fromRGBO(
+      random.nextInt(255),
+      random.nextInt(255),
+      random.nextInt(255),
+      1);
+    _borderRadius = BorderRadius.circular(random.nextInt(255).toDouble() + 10);
+
+    setState(() {});
   }
 
   @override
