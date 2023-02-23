@@ -36,6 +36,11 @@ class AppRoutes {
         icon: Icons.supervisor_account_outlined,
         name: 'Cricle Avatar',
         screen: AvatarScreen()),
+    MenuOption(
+        route: 'animated',
+        icon: Icons.supervisor_account_outlined,
+        name: 'Animated Container',
+        screen: AnimatedScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getRoutes() {
