@@ -36,7 +36,9 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
       appBar: AppBar(title: const Text('Aminated Container')),
       body: Center(
         child: AnimatedContainer(
-          duration: const Duration(milliseconds: 400),
+          duration: const Duration(milliseconds: 300),
+          //https://api.flutter.dev/flutter/animation/Curves-class.html
+          curve: Curves.easeOutCubic,
           // color: Colors.red,
           width: _width,
           height: _height,
