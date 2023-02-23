@@ -13,6 +13,10 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   Color _color = Colors.indigo;
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(20);
 
+  void changeShape() {
+    print('change');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +31,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.play_circle_outline),
-        onPressed: () {},
+        onPressed: changeShape,
       ),
     );
   }
