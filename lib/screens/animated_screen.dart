@@ -35,7 +35,8 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
     return Scaffold(
       appBar: AppBar(title: const Text('Aminated Container')),
       body: Center(
-        child: Container(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 400),
           // color: Colors.red,
           width: _width,
           height: _height,
