@@ -31,6 +31,11 @@ class AppRoutes {
         icon: Icons.list_sharp,
         name: 'List view Screen 2',
         screen: ListView2Screen()),
+    MenuOption(
+        route: 'avatar',
+        icon: Icons.supervisor_account_outlined,
+        name: 'Cricle Avatar',
+        screen: AvatarScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getRoutes() {
