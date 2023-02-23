@@ -14,7 +14,14 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(20);
 
   void changeShape() {
-    print('change');
+    _width += 100;
+    _height += 100;
+    _color = Colors.red;
+    _borderRadius = BorderRadius.circular(10);
+
+    setState(() {
+      
+    });
   }
 
   @override
