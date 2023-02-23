@@ -6,7 +6,12 @@ class AvatarScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text('Avatar Screen')),
+      appBar: AppBar(
+        title: const Text('Avatars'),
+      ),
+      body: const Center(
+        child: Text('Avatar Screen')
+      ),
     );
   }
 }
