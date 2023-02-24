@@ -17,10 +17,14 @@ class InputScreen extends StatelessWidget {
           ),
           child: Column(
             children: [
-
-              
-
-
+              TextFormField(
+                autofocus: true,
+                initialValue: 'Ivan Gonzalez',
+                textCapitalization: TextCapitalization.words,
+                onChanged: (value) {
+                  print('El valor es $value');
+                },
+              )
             ],
           ),
         ),
