@@ -19,11 +19,19 @@ class InputScreen extends StatelessWidget {
             children: [
               TextFormField(
                 autofocus: true,
-                initialValue: 'Ivan Gonzalez',
+                initialValue: '',
+                // initialValue: 'Ivan Gonzalez',
                 textCapitalization: TextCapitalization.words,
                 onChanged: (value) {
                   print('El valor es $value');
                 },
+                validator: (value) {
+                  if (value == null) return 'Este campo es requerido';
+
+                  // return 'Hola mundo';
+                  return value.length < 3 ? 'Mínimo 3 caracteres' : null;
+                },
+                autovalidateMode: AutovalidateMode.always,
               )
             ],
           ),
