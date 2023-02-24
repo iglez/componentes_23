@@ -41,6 +41,11 @@ class AppRoutes {
         icon: Icons.supervisor_account_outlined,
         name: 'Animated Container',
         screen: AnimatedScreen()),
+    MenuOption(
+        route: 'inputs',
+        icon: Icons.input_rounded,
+        name: 'Text Inputs',
+        screen: InputScreen()),
   ];
 
   static Map<String, Widget Function(BuildContext)> getRoutes() {
