@@ -31,7 +31,22 @@ class InputScreen extends StatelessWidget {
                   // return 'Hola mundo';
                   return value.length < 3 ? 'Mínimo 3 caracteres' : null;
                 },
-                autovalidateMode: AutovalidateMode.always,
+                autovalidateMode: AutovalidateMode.onUserInteraction,
+                decoration: const InputDecoration(
+                  hintText: 'Nombre del usuario',
+                  labelText: 'Nombre',
+                  helperText: 'Solo letras',
+                  // counterText: '3 caracteres'
+                  // prefixIcon: Icon(Icons.verified_user),
+                  suffixIcon: Icon(Icons.group_outlined),
+                  icon: Icon(Icons.verified_user_sharp),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
+                    )
+                  )
+                ),
               )
             ],
           ),
