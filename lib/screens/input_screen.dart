@@ -9,7 +9,22 @@ class InputScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Inputs y Forms'),
       ),
-      body: Center(child: Text('Text Input')),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 10,
+          ),
+          child: Column(
+            children: [
+
+              
+
+
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
