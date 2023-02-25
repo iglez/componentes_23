@@ -1,4 +1,4 @@
-import 'package:componentes_23/screens/screens.dart';
+import 'package:componentes_23/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class InputScreen extends StatelessWidget {

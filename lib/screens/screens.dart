@@ -1,4 +1,3 @@
-export 'package:componentes_23/widgets/custom_input_field.dart';
 export 'package:componentes_23/screens/input_screen.dart';
 export 'package:componentes_23/screens/animated_screen.dart';
 export 'package:componentes_23/screens/alert_screen.dart';
