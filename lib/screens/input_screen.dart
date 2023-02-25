@@ -17,8 +17,11 @@ class InputScreen extends StatelessWidget {
             vertical: 10,
           ),
           child: Column(
-            children: [
-              CustomInputField()
+            children: const [
+              CustomInputField(
+                labelText: 'Nombre',
+                hintText: 'Nombre del usuario',
+              )
             ],
           ),
         ),
