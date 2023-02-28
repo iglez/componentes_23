@@ -28,7 +28,10 @@ class InputScreen extends StatelessWidget {
               SizedBox( height:30 ),
               CustomInputField(labelText: 'Correo', hintText: 'Correo del usuario', keyboardType: TextInputType.emailAddress,),
               SizedBox( height:30 ),
-
+              CustomInputField(labelText: 'Contraseña', 
+              hintText: 'Contraseña', 
+              keyboardType: TextInputType.emailAddress,
+              isPassword: true,),
             ],
           ),
         ),

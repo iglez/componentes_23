@@ -7,8 +7,9 @@ class CustomInputField extends StatelessWidget {
     this.labelText,
     this.helperText,
     this.icon,
-    this.sufixIcon, 
+    this.sufixIcon,
     this.keyboardType,
+    this.isPassword = false,
   });
 
   final String? hintText;
@@ -17,6 +18,7 @@ class CustomInputField extends StatelessWidget {
   final IconData? icon;
   final IconData? sufixIcon;
   final TextInputType? keyboardType;
+  final bool isPassword;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,8 @@ class CustomInputField extends StatelessWidget {
       // keyboardType: TextInputType.emailAddress,
       // keyboardType: TextInputType.emailAddress,
       keyboardType: keyboardType,
+      // obscureText: true,
+      obscureText: isPassword,
       onChanged: (value) {
         print('El valor es $value');
       },
