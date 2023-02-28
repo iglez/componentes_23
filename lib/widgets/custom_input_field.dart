@@ -5,9 +5,10 @@ class CustomInputField extends StatelessWidget {
     super.key,
     this.hintText,
     this.labelText,
-    this.helperText, 
-    this.icon, 
-    this.sufixIcon,
+    this.helperText,
+    this.icon,
+    this.sufixIcon, 
+    this.keyboardType,
   });
 
   final String? hintText;
@@ -15,6 +16,7 @@ class CustomInputField extends StatelessWidget {
   final String? helperText;
   final IconData? icon;
   final IconData? sufixIcon;
+  final TextInputType? keyboardType;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,9 @@ class CustomInputField extends StatelessWidget {
       autofocus: true,
       initialValue: '',
       // initialValue: 'Ivan Gonzalez',
-      textCapitalization: TextCapitalization.words,
+      // keyboardType: TextInputType.emailAddress,
+      // keyboardType: TextInputType.emailAddress,
+      keyboardType: keyboardType,
       onChanged: (value) {
         print('El valor es $value');
       },
