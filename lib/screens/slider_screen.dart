@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 
-class SliderScreen extends StatelessWidget {
+class SliderScreen extends StatefulWidget {
   const SliderScreen({super.key});
+
+  @override
+  State<SliderScreen> createState() => _SliderScreenState();
+}
+
+class _SliderScreenState extends State<SliderScreen> {
+  double _sliderValue = 100;
 
   @override
   Widget build(BuildContext context) {
@@ -11,10 +18,11 @@ class SliderScreen extends StatelessWidget {
         children: [
           Slider(
               min: 50,
-              value: 100,
+              value: _sliderValue,
               max: 400,
               onChanged: (value) {
-                print(value);
+                _sliderValue = value;
+                setState(() {});
               }),
         ],
       ),
