@@ -16,10 +16,12 @@ class _SliderScreenState extends State<SliderScreen> {
       appBar: AppBar(title: Text('Slider')),
       body: Column(
         children: [
-          Slider(
+          // Slider(
+          Slider.adaptive(
               min: 50,
               value: _sliderValue,
               max: 400,
+              // divisions: 10,
               onChanged: (value) {
                 _sliderValue = value;
                 setState(() {});
