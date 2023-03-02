@@ -18,14 +18,20 @@ class _SliderScreenState extends State<SliderScreen> {
         children: [
           // Slider(
           Slider.adaptive(
-              min: 50,
-              value: _sliderValue,
-              max: 400,
-              // divisions: 10,
-              onChanged: (value) {
-                _sliderValue = value;
-                setState(() {});
-              }),
+            min: 50,
+            value: _sliderValue,
+            max: 400,
+            // divisions: 10,
+            onChanged: (value) {
+              _sliderValue = value;
+              setState(() {});
+            }
+          ),
+          Image(
+            image: NetworkImage('https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo-cetys.png/605px-Logo-cetys.png'),
+            fit: BoxFit.contain,
+            width: _sliderValue,
+          )
         ],
       ),
     );
