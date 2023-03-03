@@ -23,10 +23,12 @@ class _SliderScreenState extends State<SliderScreen> {
               value: _sliderValue,
               max: 400,
               // divisions: 10,
-              onChanged: (value) {
+              onChanged: _sliderEnabled 
+                ? (value) {
                 _sliderValue = value;
                 setState(() {});
-              }),
+              } 
+              : null),
 
           Checkbox(
               value: _sliderEnabled,
