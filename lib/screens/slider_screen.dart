@@ -38,10 +38,16 @@ class _SliderScreenState extends State<SliderScreen> {
                   
           //       });
           //     }),
+
           CheckboxListTile(
             title: const Text('Habilitar slider'),
             value: _sliderEnabled, 
             onChanged: (value) => setState(() { _sliderEnabled = value ?? true; })
+          ),
+
+          Switch(
+            value: _sliderEnabled, 
+            onChanged: (value) => setState(( ) { _sliderEnabled = value; })
           ),
 
           Image(
