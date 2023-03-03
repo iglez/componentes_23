@@ -9,6 +9,7 @@ class SliderScreen extends StatefulWidget {
 
 class _SliderScreenState extends State<SliderScreen> {
   double _sliderValue = 100;
+  bool _sliderEnabled = true;
 
   @override
   Widget build(BuildContext context) {
@@ -18,17 +19,27 @@ class _SliderScreenState extends State<SliderScreen> {
         children: [
           // Slider(
           Slider.adaptive(
-            min: 50,
-            value: _sliderValue,
-            max: 400,
-            // divisions: 10,
-            onChanged: (value) {
-              _sliderValue = value;
-              setState(() {});
-            }
-          ),
+              min: 50,
+              value: _sliderValue,
+              max: 400,
+              // divisions: 10,
+              onChanged: (value) {
+                _sliderValue = value;
+                setState(() {});
+              }),
+
+          Checkbox(
+              value: _sliderEnabled,
+              onChanged: (value) {
+                _sliderEnabled = value ?? true;
+                setState(() {
+                  
+                });
+              }),
+
           Image(
-            image: const NetworkImage('https://static.wikia.nocookie.net/thelastofus/images/b/b1/Stalker_models.png/revision/latest?cb=20200711175035'),
+            image: const NetworkImage(
+                'https://static.wikia.nocookie.net/thelastofus/images/b/b1/Stalker_models.png/revision/latest?cb=20200711175035'),
             fit: BoxFit.contain,
             width: _sliderValue,
           ),
