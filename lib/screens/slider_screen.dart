@@ -53,7 +53,7 @@ class _SliderScreenState extends State<SliderScreen> {
           SwitchListTile.adaptive(
             title: const Text('Habilitar slider'),
             value: _sliderEnabled, 
-            onChanged: (value) => setState(() { _sliderEnabled = value ?? true; })
+            onChanged: (value) => setState(() { _sliderEnabled = value; })
           ),
 
           Image(
