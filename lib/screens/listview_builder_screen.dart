@@ -5,10 +5,17 @@ class ListViewBuilderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('List'),
-      ),
+    return Scaffold(
+      body: ListView.builder(
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          // https://picsum.photos/
+          return FadeInImage(
+            placeholder: AssetImage('assets/jar-loading.gif'),
+            image: NetworkImage('https://picsum.photos/500/300?image=${index+1}'),
+          );
+        },
+      )
     );
   }
 }
