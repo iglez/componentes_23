@@ -45,9 +45,15 @@ class _SliderScreenState extends State<SliderScreen> {
             onChanged: (value) => setState(() { _sliderEnabled = value ?? true; })
           ),
 
-          Switch(
+          // Switch(
+          //   value: _sliderEnabled, 
+          //   onChanged: (value) => setState(( ) { _sliderEnabled = value; })
+          // ),
+
+          SwitchListTile(
+            title: const Text('Habilitar slider'),
             value: _sliderEnabled, 
-            onChanged: (value) => setState(( ) { _sliderEnabled = value; })
+            onChanged: (value) => setState(() { _sliderEnabled = value ?? true; })
           ),
 
           Image(
