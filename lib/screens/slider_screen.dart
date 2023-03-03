@@ -30,14 +30,18 @@ class _SliderScreenState extends State<SliderScreen> {
               } 
               : null),
 
-          Checkbox(
-              value: _sliderEnabled,
-              onChanged: (value) {
-                _sliderEnabled = value ?? true;
-                setState(() {
+          // Checkbox(
+          //     value: _sliderEnabled,
+          //     onChanged: (value) {
+          //       _sliderEnabled = value ?? true;
+          //       setState(() {
                   
-                });
-              }),
+          //       });
+          //     }),
+          CheckboxListTile(
+            value: _sliderEnabled, 
+            onChanged: (value) => setState(() { _sliderEnabled = value ?? true; })
+          ),
 
           Image(
             image: const NetworkImage(
