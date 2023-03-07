@@ -17,9 +17,19 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
     super.initState();
 
     scrollController.addListener(() {
-      print(scrollController.position.pixels);
-      print(scrollController.position.maxScrollExtent);
+      // print(scrollController.position.pixels);
+      // print(scrollController.position.maxScrollExtent);
+      if ((scrollController.position.pixels + 500) >=
+          scrollController.position.maxScrollExtent) {
+        add10();
+      }
     });
+  }
+
+  void add10() {
+    int lastID = imagesIDs.last;
+    imagesIDs.addAll([1, 2, 3, 4, 5].map((e) => lastID + e));
+    setState(() {});
   }
 
   @override
