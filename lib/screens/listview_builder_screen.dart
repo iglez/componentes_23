@@ -9,6 +9,18 @@ class ListViewBuilderScreen extends StatefulWidget {
 
 class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
   final List<int> imagesIDs = [1, 2, 3, 4, 5, 6, 7, 8, 10];
+  final ScrollController scrollController = ScrollController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    scrollController.addListener(() {
+      print(scrollController.position.pixels);
+      print(scrollController.position.maxScrollExtent);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +31,7 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
           removeTop: true,
           removeBottom: true,
           child: ListView.builder(
+            controller: scrollController,
             itemCount: imagesIDs.length,
             itemBuilder: (context, index) {
               // https://picsum.photos/
@@ -28,7 +41,7 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
                 fit: BoxFit.cover,
                 placeholder: AssetImage('assets/jar-loading.gif'),
                 image: NetworkImage(
-                    'https://picsum.photos/500/300?image=${ imagesIDs[index] }'),
+                    'https://picsum.photos/500/300?image=${imagesIDs[index]}'),
               );
             },
           ),
