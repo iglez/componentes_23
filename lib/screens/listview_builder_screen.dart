@@ -56,6 +56,10 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
     setState(() {});
   }
 
+  Future<void> onRefresh() async {
+
+  }
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -68,20 +72,23 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
           removeBottom: true,
           child: Stack(
             children: [
-              ListView.builder(
-                controller: scrollController,
-                itemCount: imagesIDs.length,
-                itemBuilder: (context, index) {
-                  // https://picsum.photos/
-                  return FadeInImage(
-                    width: double.infinity,
-                    height: 300,
-                    fit: BoxFit.cover,
-                    placeholder: AssetImage('assets/jar-loading.gif'),
-                    image: NetworkImage(
-                        'https://picsum.photos/500/300?image=${imagesIDs[index]}'),
-                  );
-                },
+              RefreshIndicator(
+                onRefresh: onRefresh,
+                child: ListView.builder(
+                  controller: scrollController,
+                  itemCount: imagesIDs.length,
+                  itemBuilder: (context, index) {
+                    // https://picsum.photos/
+                    return FadeInImage(
+                      width: double.infinity,
+                      height: 300,
+                      fit: BoxFit.cover,
+                      placeholder: AssetImage('assets/jar-loading.gif'),
+                      image: NetworkImage(
+                          'https://picsum.photos/500/300?image=${imagesIDs[index]}'),
+                    );
+                  },
+                ),
               ),
               if (isLoading)
                 Positioned(
