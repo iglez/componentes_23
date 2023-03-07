@@ -57,7 +57,13 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
   }
 
   Future<void> onRefresh() async {
+    await Future.delayed(const Duration(seconds: 2));
 
+    int lastId = imagesIDs.last;
+    imagesIDs.clear();
+    imagesIDs.add(lastId + 1);
+
+    add10();
   }
 
   @override
