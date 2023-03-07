@@ -10,6 +10,7 @@ class ListViewBuilderScreen extends StatefulWidget {
 class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
   final List<int> imagesIDs = [1, 2, 3, 4, 5, 6, 7, 8, 10];
   final ScrollController scrollController = ScrollController();
+  bool isLoading = false;
 
   @override
   void initState() {
@@ -21,9 +22,25 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
       // print(scrollController.position.maxScrollExtent);
       if ((scrollController.position.pixels + 500) >=
           scrollController.position.maxScrollExtent) {
-        add10();
+        // add10();
+        fetchData();
       }
     });
+  }
+
+  Future fetchData() async {
+    if (isLoading) return;
+
+    isLoading = true;
+    setState(() {});
+
+    // simulando que tiempo
+    await Future.delayed(const Duration(seconds: 3));
+
+    add10();
+
+    isLoading = false;
+    setState(() {});
   }
 
   void add10() {
