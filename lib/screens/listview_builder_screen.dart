@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ListViewBuilderScreen extends StatelessWidget {
+class ListViewBuilderScreen extends StatefulWidget {
   const ListViewBuilderScreen({super.key});
 
+  @override
+  State<ListViewBuilderScreen> createState() => _ListViewBuilderScreenState();
+}
+
+class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
