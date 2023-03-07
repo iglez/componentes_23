@@ -57,20 +57,30 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
           context: context,
           removeTop: true,
           removeBottom: true,
-          child: ListView.builder(
-            controller: scrollController,
-            itemCount: imagesIDs.length,
-            itemBuilder: (context, index) {
-              // https://picsum.photos/
-              return FadeInImage(
-                width: double.infinity,
+          child: Stack(
+            children: [
+              ListView.builder(
+                controller: scrollController,
+                itemCount: imagesIDs.length,
+                itemBuilder: (context, index) {
+                  // https://picsum.photos/
+                  return FadeInImage(
+                    width: double.infinity,
+                    height: 300,
+                    fit: BoxFit.cover,
+                    placeholder: AssetImage('assets/jar-loading.gif'),
+                    image: NetworkImage(
+                        'https://picsum.photos/500/300?image=${imagesIDs[index]}'),
+                  );
+                },
+              ),
+
+              Container(
+                color: Colors.red,
+                width: 300,
                 height: 300,
-                fit: BoxFit.cover,
-                placeholder: AssetImage('assets/jar-loading.gif'),
-                image: NetworkImage(
-                    'https://picsum.photos/500/300?image=${imagesIDs[index]}'),
-              );
-            },
+              )
+            ],
           ),
         ));
   }
