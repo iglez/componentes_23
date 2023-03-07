@@ -90,9 +90,15 @@ class _loadingIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
-      width: 300,
-      height: 300,
+      padding: const EdgeInsets.all(10),
+      // color: Colors.white,
+      width: 60,
+      height: 60,
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.9),
+        shape: BoxShape.circle
+      ),
+      child: const CircularProgressIndicator(),
     );
   }
 }
