@@ -42,11 +42,12 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
     isLoading = false;
     setState(() {});
 
-    scrollController.animateTo(
-      scrollController.position.pixels + 120,
-      duration: const Duration(milliseconds: 300), 
-      curve: Curves.fastOutSlowIn
-    );
+    if ((scrollController.position.pixels + 100) <=
+        scrollController.position.maxScrollExtent) return;
+
+    scrollController.animateTo(scrollController.position.pixels + 120,
+        duration: const Duration(milliseconds: 300),
+        curve: Curves.fastOutSlowIn);
   }
 
   void add10() {
