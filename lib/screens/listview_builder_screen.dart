@@ -75,13 +75,24 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
                 },
               ),
 
-              Container(
-                color: Colors.red,
-                width: 300,
-                height: 300,
-              )
+              const _loadingIcon()
             ],
           ),
         ));
+  }
+}
+
+class _loadingIcon extends StatelessWidget {
+  const _loadingIcon({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.red,
+      width: 300,
+      height: 300,
+    );
   }
 }
