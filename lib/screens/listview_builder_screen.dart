@@ -51,6 +51,8 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Scaffold(
         backgroundColor: Colors.black,
         body: MediaQuery.removePadding(
@@ -74,8 +76,11 @@ class _ListViewBuilderScreenState extends State<ListViewBuilderScreen> {
                   );
                 },
               ),
-
-              const _loadingIcon()
+              Positioned(
+                bottom: 40, 
+                left: size.width * 0.5 - 30,
+                child: const _loadingIcon()
+              ),
             ],
           ),
         ));
@@ -95,9 +100,7 @@ class _loadingIcon extends StatelessWidget {
       width: 60,
       height: 60,
       decoration: BoxDecoration(
-        color: Colors.white.withOpacity(0.9),
-        shape: BoxShape.circle
-      ),
+          color: Colors.white.withOpacity(0.9), shape: BoxShape.circle),
       child: const CircularProgressIndicator(),
     );
   }
